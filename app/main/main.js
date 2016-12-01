@@ -10,11 +10,9 @@ const configuration = require('../configuration');
 
 const { BrowserWindow, ipcMain, globalShortcut } = electron;
 
-// const mainWindowURL = 'file://' + __dirname + '../public/index.html';
-// const mainWindowURL = path.join(__dirname, '../public/index.html');
-// const settingsWindowURL = path.join(__dirname, '../public/settings.html');
-const mainWindowURL = path.join(__dirname, '../../public/index.html');
-const settingsWindowURL = path.join(__dirname, '../../public/settings.html');
+//const mainWindowURL = path.join(__dirname, '../../public/index.html');
+const mainWindowURL = path.join(__dirname, '../public/index.html');
+//const settingsWindowURL = path.join(__dirname, '../../public/settings.html');
 
 console.log(mainWindowURL);
 
@@ -32,28 +30,28 @@ ipcMain.on('close-main-window', () => {
   app.quit();
 });
 
-ipcMain.on('open-settings-window', () => {
-  if (settingsWindow) {
-    return;
-  }
-
-  settingsWindow = new BrowserWindow({
-    frame: false,
-    resizable: false,
-    height: 200,
-    width: 200,
-  });
-
-  settingsWindow.loadURL(settingsWindowURL);
-
-  settingsWindow.on('close', () => {
-    settingsWindow = null;
-  });
-});
-
-ipcMain.on('close-settings-window', () => {
-  settingsWindow.close();
-});
+// ipcMain.on('open-settings-window', () => {
+//   if (settingsWindow) {
+//     return;
+//   }
+//
+//   settingsWindow = new BrowserWindow({
+//     frame: false,
+//     resizable: false,
+//     height: 200,
+//     width: 200,
+//   });
+//
+//   settingsWindow.loadURL(settingsWindowURL);
+//
+//   settingsWindow.on('close', () => {
+//     settingsWindow = null;
+//   });
+// });
+//
+// ipcMain.on('close-settings-window', () => {
+//   settingsWindow.close();
+// });
 
 ipcMain.on('set-global-shortcuts', () => {
   setGlobalShortcuts();
@@ -67,8 +65,8 @@ app.on('ready', function() {
   }
 
   mainWindow = new BrowserWindow({
-    height: 700,
-    width: 368,
+    height: 960,
+    width: 960,
     resizable: false,
     frame: false,
   });

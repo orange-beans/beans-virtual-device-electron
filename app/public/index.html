@@ -86,6 +86,7 @@
   <script src="js/prjX.language_engine.js"></script>
   <script src="js/prjX.dom_module.js"></script>
   <script src="js/prjX.virtual_device.js"></script>
+  <script src='js/virtual_device_template.js'></script>
   <!--<script src="js/prjX.device.js"></script>-->
 
   <!--<script src="lan_obj.js"></script>-->
@@ -144,10 +145,8 @@
         }
       });
 
-
-
-      $.getJSON("js/virtual_device.json", function (data) {
-        window.test = data["f_obj"][lan.lang];
+      {
+        window.test = vd_template["f_obj"][lan.lang];
         //var Logic = vdev.V_Logic('Logic');
         var Logic = vdev.V_Logic('逻辑');
         Logic.btn.create($area2);
@@ -160,7 +159,23 @@
         vdev.router.btn.setTarget($raw);
 
         temp_set_drag();
-      });
+      }
+
+      // $.getJSON("js/virtual_device.json", function (data) {
+      //   window.test = data["f_obj"][lan.lang];
+      //   //var Logic = vdev.V_Logic('Logic');
+      //   var Logic = vdev.V_Logic('逻辑');
+      //   Logic.btn.create($area2);
+      //   Logic.btn.setTarget($raw);
+      //
+      //   // Create the router
+      //   vdev.V_Router();
+      //   vdev.router.create($stage);
+      //   vdev.router.btn.create($area2);
+      //   vdev.router.btn.setTarget($raw);
+      //
+      //   temp_set_drag();
+      // });
 
       var g_exe = function (){};
       // Sorting the orders of the control buttons

@@ -1,5 +1,5 @@
 {
-  "name": "Beans Virtual Devices",
+  "name": "beans-virtual-device-electron",
   "version": "1.0.0",
   "main": "./app/main/entry.js",
   "license": "MIT",
