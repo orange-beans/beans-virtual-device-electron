@@ -67,11 +67,14 @@ app.on('ready', function() {
   }
 
   mainWindow = new BrowserWindow({
-    height: 960,
-    width: 960,
+    height: 1020,
+    width: 994,
     resizable: false,
-    frame: false,
+    frame: true,
   });
+
+  // Set menu null
+  //mainWindow.setMenu(null);
 
   console.log(mainWindowURL);
   mainWindow.loadURL(mainWindowURL);

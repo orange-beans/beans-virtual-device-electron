@@ -10,7 +10,7 @@
   "scripts": {
     "start": "electron .",
     "dev": "webpack --target electron --progress --color --watch --display-error-details",
-    "build": "electron-packager ./ BeansVirtualDevice --platform=win32 --out ./build --overwrite --icon=./app/public/img/app-icon.ico",
+    "build": "electron-packager ./ BeansVirtualDevice --platform=win32 --out ./build --overwrite --icon=./app/public/rs/img/app-icon.ico",
     "package": "node build-installer.js"
   },
   "devDependencies": {
