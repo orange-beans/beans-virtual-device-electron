@@ -341,7 +341,7 @@ var vdev = (function () {
                  + '<div id="dev_router_AB" class="" style="">'
                  +   '<div><label class="name" style="vertical-align:middle;display: inline-block;margin-left: 5%;" for="hidden-input">'
                  +     'router</label></div>'
-                 +   '<div class="" style="position:absolute;padding:0;top:0;right:20px;"><span style="vertical-align:middle;display: inline-block;margin-left: 25%"><img src="../rs/img/Logo155.png" alt="Smiley face" height="30" width=71.4"></span></div>'
+                 +   '<div class="" style="position:absolute;padding:0;top:0;right:20px;"><span style="vertical-align:middle;display: inline-block;margin-left: 25%"><img src="../public/rs/img/Logo155.png" alt="Smiley face" height="30" width=71.4"></span></div>'
                  +   '<div class="name-changer" style="margin-left: 5%;"><input type="text" size="7"></div>'
                  +   '<div class="v-clock" style="white-space: pre-wrap;vertical-align:middle;margin-left: 5%;margin-top:10%"></div>'
                  + '</div>',
@@ -686,17 +686,18 @@ var vdev = (function () {
       },
       _counter = 0,
       _song_list = [
-        '../rs/audio/01.self.mp3',
-        '../rs/audio/02.memory.mp3',
-        '../rs/audio/03.wukong.mp3',
-        '../rs/audio/04.achu.mp3',
-        '../rs/audio/05.wind.mp3',
-        '../rs/audio/06.lovesong.mp3',
-        '../rs/audio/07.onyourshoulder.mp3',
-        '../rs/audio/08.makeyouhappy.mp3',
-        '../rs/audio/09.goodolddays.mp3',
-        '../rs/audio/10.welcome.mp3'
+        '../public/rs/audio/01.self.mp3',
+        '../public/rs/audio/02.memory.mp3',
+        '../public/rs/audio/03.wukong.mp3',
+        '../public/rs/audio/04.achu.mp3',
+        '../public/rs/audio/05.wind.mp3',
+        '../public/rs/audio/06.lovesong.mp3',
+        '../public/rs/audio/07.onyourshoulder.mp3',
+        '../public/rs/audio/08.makeyouhappy.mp3',
+        '../public/rs/audio/09.goodolddays.mp3',
+        '../public/rs/audio/10.welcome.mp3'
       ],
+      // TODO: Still the save string PATH PROBLEM!!!
       _input_map = {
         main_html: String()
                  + '<div id="dev_Music_A" class="" style="">'
@@ -709,7 +710,7 @@ var vdev = (function () {
                  +   '<div class="module-closer"><span style="vertical-align:middle;display: inline-block;margin-left: 25%"></span></div>'
                  +   '<div class="name-changer" style="margin-left: 5%;"><input type="text" size="7"></div>'
                  +   '<audio controls style="width: 95%;margin-left: 2.5%;margin-top:18%">'
-                 +     '<source src="../rs/audio/01.self.mp3" type="audio/mpeg">'
+                 +     '<source src="../public/rs/audio/01.self.mp3" type="audio/mpeg">'
                  +       'Your browser does not support the audio element.'
                  +   '</audio>'
                  + '</div>',
@@ -983,4 +984,3 @@ return {
 };
 
 })();
-

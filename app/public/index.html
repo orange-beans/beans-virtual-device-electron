@@ -65,6 +65,14 @@
 
   </style>
   <script src="js/jq/jquery.min.js"></script>
+  <script>
+    // This code is to solve the jQuery undefined problem
+    try {
+        $ = jQuery = module.exports;
+        // If you want module.exports to be empty, uncomment:
+        // module.exports = {};
+    } catch(e) {}
+  </script>
   <script src="js/bootstrap/bootstrap.min.js"></script>
   <script src="js/jq/jquery-ui.min.js"></script>
   <script src="js/jq/jquery.event.ue.js"></script>

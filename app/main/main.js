@@ -3,6 +3,7 @@
 const electron = require('electron');
 const path = require('path');
 const app = electron.app;
+const protocol = electron.protocol;
 const configuration = require('../configuration');
 // const BrowserWindow = electron.BrowserWindow;
 // const ipcMain = electron.ipcMain;
@@ -57,6 +58,7 @@ ipcMain.on('set-global-shortcuts', () => {
   setGlobalShortcuts();
 });
 
+
 // Start App
 app.on('ready', function() {
   // Init configuration
@@ -77,6 +79,9 @@ app.on('ready', function() {
   mainWindow.webContents.on('did-finish-load', () => {
     mainWindow.webContents.send('ping', 'whoooooooh!');
   });
+
+  // Open Dev-debug window
+  //mainWindow.openDevTools();
 
   setGlobalShortcuts();
 
